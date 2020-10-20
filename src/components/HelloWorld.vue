@@ -32,13 +32,16 @@
 
 <script lang="ts">
 import { defineComponent } from 'vue';
-
-export default defineComponent({
+const component = defineComponent({
   name: 'HelloWorld',
-  props: {
-    msg: String,
+  props:{
+    msg:String,
   },
-});
+  setup(props,context){
+    props.msg;
+  }
+})
+export default component;
 </script>
 
 <!-- Add "scoped" attribute to limit CSS to this component only -->
